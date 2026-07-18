@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="联系 KH | KH科合视造">
+  <section class="page-intro contact-page">
+    <div class="contact-copy">
+      <p class="contact-kicker">Start a Project</p>
+      <h1>让新的表达<br />从一次对话开始</h1>
+      <p class="contact-lead">告诉我们你的品牌、项目与目标。</p>
+
+      <div class="contact-methods" aria-label="联系方式">
+        <a class="contact-method" href="tel:13958196998">
+          <span>Phone</span>
+          <strong>139 5819 6998</strong>
+        </a>
+        <div class="contact-method">
+          <span>WeChat</span>
+          <strong>容易</strong>
+          <p>扫描右侧二维码添加微信</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wechat-panel">
+      <a class="wechat-qr" href="/contact/wechat-rongyi-qr.png" target="_blank" rel="noopener" aria-label="打开微信二维码原图">
+        <img src="/contact/wechat-rongyi-qr.png" width="960" height="960" alt="微信联系人容易的二维码" />
+      </a>
+      <figcaption>微信扫码添加 容易</figcaption>
+    </figure>
+  </section>
+</BaseLayout>

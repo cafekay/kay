@@ -1,0 +1,26 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const items = [
+  ["Brand Identity", "品牌视觉", "梳理品牌的视觉秩序，形成清晰、统一且可持续的识别系统。", "品牌梳理 / 视觉识别 / 包装设计 / 宣传视觉"],
+  ["Commercial Film", "商业影像", "以镜头、节奏与叙事，将品牌内容转化为具有情绪的影像。", "企业宣传片 / 产品影像 / 人物访谈 / 活动影像"],
+  ["Digital Creation", "数字创意", "融合 AI 影像、动态视觉与数字媒介，探索品牌表达的新形态。", "AI影像 / 动态视觉 / 数字内容 / 创意短片"],
+  ["Brand Experience", "品牌体验", "将视觉延伸至展陈与活动现场，让品牌从画面进入真实空间。", "展陈设计 / 活动策划 / 空间视觉 / 现场呈现"]
+];
+---
+
+<BaseLayout title="核心能力 | KH科合视造">
+  <section class="page-intro compact-intro">
+    <p>Capabilities</p>
+    <h1>核心能力</h1>
+  </section>
+  <section class="capability-pages">
+    {items.map(([en, cn, body, scope]) => (
+      <article>
+        <p>{en}</p>
+        <h2>{cn}</h2>
+        <p>{body}</p>
+        <p>{scope}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

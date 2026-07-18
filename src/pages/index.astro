@@ -1,0 +1,146 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const capabilities = [
+  {
+    en: "Brand Identity",
+    cn: "品牌视觉",
+    body: "梳理品牌的视觉秩序，形成清晰、统一且可持续的识别系统。",
+    cover: "/works/brand-identity-01/cover.webp",
+    href: "/works/category/brand-identity"
+  },
+  {
+    en: "Commercial Film",
+    cn: "商业影像",
+    body: "以镜头、节奏与叙事，将品牌内容转化为具有情绪的影像。",
+    cover: "/works/commercial-film-01/cover.webp",
+    href: "/works/category/commercial-film"
+  },
+  {
+    en: "Digital Creation",
+    cn: "数字创意",
+    body: "融合 AI 影像、动态视觉与数字媒介，探索品牌表达的新形态。",
+    cover: "/works/digital-creation-01/cover.webp",
+    href: "/works/category/digital-creation"
+  },
+  {
+    en: "Brand Experience",
+    cn: "品牌体验",
+    body: "将视觉延伸至展陈与活动现场，让品牌从画面进入真实空间。",
+    cover: "/works/brand-experience-02/cover.webp",
+    href: "/works/category/brand-experience"
+  }
+];
+
+const approach = [
+  ["Insight", "洞察", "理解品牌、受众与项目真正需要解决的问题。"],
+  ["Direction", "定向", "明确内容逻辑、视觉语言与创意边界。"],
+  ["Creation", "创作", "让设计、影像、数字与空间表达逐步成形。"],
+  ["Realization", "呈现", "统筹制作与现场落地，保持创意从概念到交付的一致。"]
+];
+---
+
+<BaseLayout>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-visual" aria-hidden="true">
+      <img src="/visuals/hero-dappled-light.webp" alt="" width="1672" height="941" fetchpriority="high" />
+      <span class="hero-light hero-light-a"></span>
+      <span class="hero-light hero-light-b"></span>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-studio">Visual Creative Studio</p>
+      <h1 id="hero-title">在光与形之间<br />建立品牌的感知</h1>
+      <p class="hero-scope">品牌视觉 / 商业影像 / 数字创意 / 品牌体验</p>
+      <a class="text-link" href="/works">探索作品</a>
+    </div>
+  </section>
+
+  <section class="section about-section" aria-labelledby="about-kh">
+    <div class="about-card">
+      <figure class="about-visual">
+        <img
+          src="/visuals/about-golden-waves.png"
+          width="522"
+          height="355"
+          alt="金色层叠流光纹理"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <span class="about-card-watermark" aria-hidden="true"></span>
+      <div class="about-copy">
+        <header class="section-heading">
+          <p>About KH</p>
+          <h2 id="about-kh">关于 KH</h2>
+        </header>
+        <p>KH科合视造以视觉为语言，<br />在设计、影像、数字内容与真实场景之间，探索品牌表达的不同形态。</p>
+        <p>让每一次被看见，都形成清晰而持久的感知。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="creative-fields" class="section capabilities-section" aria-labelledby="capabilities-title">
+    <span class="home-watermark watermark-right" aria-hidden="true"></span>
+    <header class="section-heading">
+      <p>Creative Fields</p>
+      <h2 id="capabilities-title">视觉创造的四种路径</h2>
+    </header>
+    <div class="capability-cards">
+      {capabilities.map((item, index) => (
+        <a class={`capability-card field-${index + 1}`} href={item.href} aria-label={`查看${item.cn}案例`}>
+          <img src={item.cover} alt={`${item.cn}案例封面`} width="1600" height="1000" loading="lazy" decoding="async" />
+          <span class="capability-card-shade" aria-hidden="true"></span>
+          <div class="capability-card-copy">
+            <p>{item.en}</p>
+            <h3>{item.cn}</h3>
+            <span>{item.body}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section approach-section" aria-labelledby="approach-title">
+    <span class="home-watermark watermark-left" aria-hidden="true"></span>
+    <header class="section-heading">
+      <p>Our Approach</p>
+      <h2 id="approach-title">合作方法</h2>
+    </header>
+    <p class="approach-intro">从理解开始，让每一种表达都有依据。</p>
+    <div class="approach-track">
+      {approach.map(([en, cn, body]) => (
+        <article>
+          <p>{en}</p>
+          <h3>{cn}</h3>
+          <div class="approach-light" aria-hidden="true"></div>
+          <p>{body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section contact-band" aria-labelledby="contact-title">
+    <span class="home-watermark watermark-right" aria-hidden="true"></span>
+    <div class="contact-band-copy">
+      <p>Start a Project</p>
+      <h2 id="contact-title">让新的表达<br />从一次对话开始</h2>
+      <p>告诉我们你的品牌、项目与目标。</p>
+      <div class="home-contact-methods">
+        <a href="tel:13958196998">
+          <span>Phone</span>
+          <strong>139 5819 6998</strong>
+        </a>
+        <a href="/contact">
+          <span>WeChat</span>
+          <strong>容易</strong>
+        </a>
+      </div>
+    </div>
+    <figure class="home-wechat-panel">
+      <a href="/contact/wechat-rongyi-qr.png" target="_blank" rel="noopener" aria-label="打开容易的微信二维码原图">
+        <img src="/contact/wechat-rongyi-qr.png" width="960" height="960" alt="微信联系人容易的二维码" loading="lazy" decoding="async" />
+      </a>
+    </figure>
+  </section>
+</BaseLayout>

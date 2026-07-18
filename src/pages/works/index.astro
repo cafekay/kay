@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const categories = [
+  {
+    id: "brand-identity",
+    en: "Brand Identity",
+    cn: "品牌视觉",
+    cover: "/works/brand-identity-01/cover.webp"
+  },
+  {
+    id: "commercial-film",
+    en: "Commercial Film",
+    cn: "商业影像",
+    cover: "/works/commercial-film-01/cover.webp"
+  },
+  {
+    id: "digital-creation",
+    en: "Digital Creation",
+    cn: "数字创意",
+    cover: "/works/digital-creation-01/cover.webp"
+  },
+  {
+    id: "brand-experience",
+    en: "Brand Experience",
+    cn: "品牌体验",
+    cover: "/works/brand-experience-02/cover.webp"
+  }
+];
+---
+
+<BaseLayout title="案例作品 | KH科合视造">
+  <section class="page-intro compact-intro">
+    <p>Works</p>
+    <h1>案例作品</h1>
+    <p>选择创意领域，查看对应案例。</p>
+  </section>
+  <nav class="work-filters" aria-label="案例分类">
+    {categories.map((item) => <a href={`/works/category/${item.id}`}>{item.en}</a>)}
+  </nav>
+  <section class="category-index" aria-label="案例分类入口">
+    <div class="category-index-grid">
+      {categories.map((item) => (
+        <a class="category-index-card" href={`/works/category/${item.id}`} aria-label={`查看${item.cn}案例`}>
+          <div class="category-index-media">
+            <img src={item.cover} alt={`${item.cn}案例封面`} width="1600" height="1000" loading="lazy" decoding="async" />
+          </div>
+          <div class="category-index-copy">
+            <p>{item.en}</p>
+            <h2>{item.cn}</h2>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

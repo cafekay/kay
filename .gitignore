@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.astro/
+.netlify/
+.npm-cache/
+.tools/
+.codex/
+.agents/
+.playwright-browsers/
+.playwright-cli/
+.playwright-local/
+output/
+
+# 本地原始素材与大型内部文件，不参与网站构建。
+新网页图片视频/
+*.wps
+*.pptx
+AIGC报价表*.png
+
+# 已被当前线上版本取代的中间媒体。
+public/works/commercial-film-04/cover.new.webp
+public/works/commercial-film-04/preview.new.mp4
+public/works/digital-creation-01/cover.new.webp
+public/works/digital-creation-01/preview.mp4

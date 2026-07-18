@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { cases, categoryLabels, type CaseCategory } from "@/data/cases";
+
+const categoryNames: Record<CaseCategory, string> = {
+  "brand-identity": "品牌视觉",
+  "commercial-film": "商业影像",
+  "digital-creation": "数字创意",
+  "brand-experience": "品牌体验"
+};
+
+export function getStaticPaths() {
+  const names: Record<CaseCategory, string> = {
+    "brand-identity": "品牌视觉",
+    "commercial-film": "商业影像",
+    "digital-creation": "数字创意",
+    "brand-experience": "品牌体验"
+  };
+
+  return (Object.keys(categoryLabels) as CaseCategory[]).map((category) => ({
+    params: { category },
+    props: {
+      category,
+      label: categoryLabels[category],
+      name: names[category],
+      items: cases.filter((item) => item.category === category)
+    }
+  }));
+}
+
+const { category, label, name, items } = Astro.props;
+---
+
+<BaseLayout title={`${name}案例 | KH科合视造`} description={`KH科合视造${name}案例。`}>
+  <a class="page-close" href="/#creative-fields" aria-label="关闭并返回首页创意领域">
+    <span aria-hidden="true">×</span>
+  </a>
+  <section class="page-intro compact-intro category-intro">
+    <p>{label}</p>
+    <h1>{name}</h1>
+  </section>
+  <nav class="work-filters" aria-label="案例分类">
+    <a href="/works">全部分类</a>
+    {(Object.keys(categoryLabels) as CaseCategory[]).map((id) => (
+      <a href={`/works/category/${id}`} aria-current={id === category ? "page" : undefined}>{categoryNames[id]}</a>
+    ))}
+  </nav>
+  <section class="category-works-section" aria-label={`${name}案例列表`}>
+    <div class="category-works-grid">
+      {items.map((item) => <ProjectCard item={item} class="compact-project-card" />)}
+    </div>
+  </section>
+</BaseLayout>
