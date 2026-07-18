@@ -1,0 +1,26 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const items = [
+  ["Insight", "洞察", "理解品牌、受众与项目真正需要解决的问题。"],
+  ["Direction", "定向", "明确内容逻辑、视觉语言与创意边界。"],
+  ["Creation", "创作", "让设计、影像、数字与空间表达逐步成形。"],
+  ["Realization", "呈现", "统筹制作与现场落地，保持创意从概念到交付的一致。"]
+];
+---
+
+<BaseLayout title="合作方法 | KH科合视造">
+  <section class="page-intro compact-intro">
+    <p>Our Approach</p>
+    <h1>合作方法</h1>
+    <p>从理解开始，让每一种表达都有依据。</p>
+  </section>
+  <section class="approach-page-list">
+    {items.map(([en, cn, body]) => (
+      <article>
+        <p>{en}</p>
+        <h2>{cn}</h2>
+        <p>{body}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

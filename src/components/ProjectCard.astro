@@ -1,0 +1,52 @@
+---
+import type { WorkCase } from "@/data/cases";
+
+interface Props {
+  item: WorkCase;
+  class?: string;
+}
+
+const { item, class: className = "" } = Astro.props;
+---
+
+<article
+  class:list={[
+    "project-card",
+    item.preview ? "has-video" : "has-image",
+    item.orientation === "portrait" && "is-portrait",
+    className
+  ]}
+  data-project-card
+>
+  {item.preview ? (
+    <>
+      <div class="project-media">
+        <video
+          src={item.preview}
+          controls
+          playsinline
+          preload="metadata"
+          poster={item.cover}
+          data-preview-start={item.previewStart ?? 0}
+          aria-label={`${item.title}案例视频`}
+        ></video>
+        <span class="media-wash" aria-hidden="true"></span>
+      </div>
+      <a class="project-caption" href={`/works/${item.slug}`} aria-label={`查看案例：${item.title}`}>
+        <h3>{item.title}</h3>
+        <p>{item.categoryLabel}</p>
+      </a>
+    </>
+  ) : (
+    <a href={`/works/${item.slug}`} aria-label={`查看案例：${item.title}`}>
+      <div class="project-media">
+        <img src={item.cover} alt={`${item.title}项目视觉`} width="1600" height="1000" loading="lazy" decoding="async" />
+        <span class="media-wash" aria-hidden="true"></span>
+      </div>
+      <div class="project-caption">
+        <h3>{item.title}</h3>
+        <p>{item.categoryLabel}</p>
+      </div>
+    </a>
+  )}
+</article>

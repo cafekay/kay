@@ -1,0 +1,104 @@
+version: 1
+
+cases:
+  - id: brand-identity-01
+    category: brand-identity
+    order: 1
+    title: 苏泊尔品牌标志视觉升级
+    source: 新网页图片视频/品牌视觉-1.jpg
+
+  - id: brand-identity-02
+    category: brand-identity
+    order: 2
+    title: 苏泊尔品牌文化视觉应用
+    source: 新网页图片视频/品牌视觉-2.jpg
+
+  - id: brand-identity-03
+    category: brand-identity
+    order: 3
+    title: 竹荪家品牌视觉设计
+    source: 新网页图片视频/品牌视觉-3.png
+
+  - id: brand-identity-04
+    category: brand-identity
+    order: 4
+    title: 佰欧克产品包装设计
+    source: 新网页图片视频/品牌视觉-4.jpg
+
+  - id: commercial-film-01
+    category: commercial-film
+    order: 1
+    title: 御茶坊
+    source: 新网页图片视频/商业影像-1（御茶坊）.mp4
+
+  - id: commercial-film-02
+    category: commercial-film
+    order: 2
+    title: 中和休闲
+    source: 新网页图片视频/商业影像-2（中和休闲）.mp4
+
+  - id: commercial-film-03
+    category: commercial-film
+    order: 3
+    title: 探店分享
+    source: 新网页图片视频/商业影像-3（探店分享）.mp4
+
+  - id: commercial-film-04
+    category: commercial-film
+    order: 4
+    title: 水陆集团初五迎财神
+    source: 新网页图片视频/商业影像-4（水陆集团初五迎财神）.mp4
+
+  - id: digital-creation-01
+    category: digital-creation
+    order: 1
+    title: 玲珑紧致面霜
+    source: 新网页图片视频/数字创意-1（玲珑紧致面霜）.mp4
+
+  - id: digital-creation-02
+    category: digital-creation
+    order: 2
+    title: 糖果乐园
+    source: 新网页图片视频/数字创意-2（糖果乐园）.mp4
+
+  - id: digital-creation-03
+    category: digital-creation
+    order: 3
+    title: 佰欧克素颜芙蓉套装
+    source: 新网页图片视频/数字创意-3（佰欧克素颜芙蓉套装）.mp4
+
+  - id: brand-experience-01
+    category: brand-experience
+    order: 1
+    title: 深蓝天城珠宝门店外立面设计
+    source: 新网页图片视频/品牌体验-1.jpg
+
+  - id: brand-experience-02
+    category: brand-experience
+    order: 2
+    title: 深蓝天城珠宝展陈空间设计
+    source: 新网页图片视频/品牌体验-2.jpg
+
+  - id: brand-experience-03
+    category: brand-experience
+    order: 3
+    title: 大白菜普洱茶品牌门店设计
+    source: 新网页图片视频/品牌体验-3.jpg
+
+  - id: brand-experience-04
+    category: brand-experience
+    order: 4
+    title: 大白菜普洱茶文化展陈设计
+    source: 新网页图片视频/品牌体验-4.jpg
+
+  - id: brand-experience-05
+    category: brand-experience
+    order: 5
+    title: 寻找自己主题活动策划
+    source: 新网页图片视频/品牌体验-5.jpg
+
+  - id: brand-experience-06
+    category: brand-experience
+    order: 6
+    title: 探索人生主题活动策划
+    source: 新网页图片视频/品牌体验-6.jpg
